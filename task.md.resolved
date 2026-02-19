@@ -1,0 +1,32 @@
+# Task: Create Personal Portfolio Website
+
+- [x] Project Setup <!-- id: 0 -->
+    - [x] Create directory structure <!-- id: 1 -->
+    - [x] Create [index.html](file:///d:/PraneshDocuments/PraneshPortfolio/index.html) skeleton <!-- id: 2 -->
+    - [x] Create `styles.css` with CSS variables for the theme <!-- id: 3 -->
+    - [x] Create [script.js](file:///d:/PraneshDocuments/PraneshPortfolio/script.js) for logic <!-- id: 4 -->
+- [x] Implementation - Phase 1: Structure & Content <!-- id: 5 -->
+    - [x] Implement Header/Hero section <!-- id: 6 -->
+    - [x] Implement About Me section <!-- id: 7 -->
+    - [x] Implement Skills section <!-- id: 8 -->
+    - [x] Implement Projects section <!-- id: 9 -->
+    - [x] Implement Experience (Internship) section <!-- id: 10 -->
+    - [x] Implement Education & Certifications section <!-- id: 11 -->
+    - [x] Implement Contact section & Footer <!-- id: 12 -->
+- [x] Implementation - Phase 2: Styling & Design <!-- id: 13 -->
+    - [x] Apply Global Dark Theme & Typography <!-- id: 14 -->
+    - [x] Implement Glassmorphism effects <!-- id: 15 -->
+    - [x] Add Animations (Hero particles, scroll transitions, hover effects) <!-- id: 16 -->
+    - [x] Ensure Responsiveness (Mobile/Tablet/Desktop) <!-- id: 17 -->
+- [x] Implementation - Phase 3: Interactivity <!-- id: 18 -->
+    - [x] Smooth scrolling & Sticky Navigation <!-- id: 19 -->
+    - [x] Project filtering (if applicable) or simple hover details <!-- id: 20 -->
+    - [x] Skill counters/animations <!-- id: 21 -->
+- [ ] Verification <!-- id: 22 -->
+    - [x] Verify all links and content <!-- id: 23 -->
+    - [x] Visual check of animations and responsiveness <!-- id: 24 -->
+    - [x] Fix Resume download link <!-- id: 25 -->
+- [ ] Deployment <!-- id: 26 -->
+    - [ ] Initialize Git repository <!-- id: 27 -->
+    - [ ] Commit files <!-- id: 28 -->
+    - [ ] Push to GitHub <!-- id: 29 -->

@@ -1,0 +1,43 @@
+# Implementation Plan - Personal Portfolio Website
+
+## Goal Description
+Create a modern, visually striking personal portfolio website for Pranesh B, a B.Tech AI & Data Science student. The site will feature a dark, futuristic aesthetic with glassmorphism, animations, and a responsive design.
+
+## Proposed Changes
+### Core Files
+#### [NEW] [index.html](file:///d:/PraneshDocuments/PraneshPortfolio/index.html)
+- Main entry point.
+- Semantic HTML5 structure.
+- Sections: Hero, About, Skills, Projects, Internship, Certifications, Education, Contact.
+
+#### [NEW] [style.css](file:///d:/PraneshDocuments/PraneshPortfolio/style.css)
+- CSS Variables for colors (Deep Navy, Neon accents), fonts, and spacing.
+- Flexbox/Grid layouts.
+- Glassmorphism utility classes.
+- Keyframe animations for entrance effects and floating elements.
+- Media queries for responsiveness.
+
+#### [NEW] [script.js](file:///d:/PraneshDocuments/PraneshPortfolio/script.js)
+- DOM manipulation for sticky navigation.
+- Smooth scrolling behavior.
+- Intersection Observer for scroll animations (fade-in up).
+- Skill counter animation logic.
+
+## Design Details
+- **Theme**: Deep Navy background (`#0a192f` or similar) with Neon Cyan/Blue accents.
+- **Typography**: modern sans-serif fonts (e.g., 'Inter', 'Outfit').
+- **Effects**: 
+    - Glassmorphism on cards (white/blue opacity with blur).
+    - Particles/Gradient background in Hero.
+    - Hover lift effects on project cards.
+
+## Verification Plan
+### Automated Tests
+- None planned for this static site.
+
+### Manual Verification
+- Open `index.html` in browser.
+- Verify Sticky Navigation works on scroll.
+- Check Hero animation.
+- Resize window to check Mobile/Tablet views.
+- Verify all content details match the prompt.

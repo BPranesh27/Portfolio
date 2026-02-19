@@ -1,0 +1,31 @@
+# Walkthrough - Pranesh B Portfolio Website
+
+I have successfully created your personal portfolio website with a modern, futuristic design.
+
+## Features Implemented
+
+### 1. **Hero Section**
+- **Animated Background**: Floating animated blobs for a dynamic feel.
+- **Glassmorphism**: Cards and elements use a translucent glass effect.
+- **Typed/Fade Animations**: Text elements fade in smoothly.
+
+### 2. **Navigation**
+- **Sticky Navbar**: Becomes smaller and adds a shadow when scrolling down.
+- **Mobile Menu**: Responsive hamburger menu for smaller screens.
+
+### 3. **Sections**
+- **About**: Highlighted your AI & DS background and career goals.
+- **Skills**: Categorized into Languages, Web Tech, and Tools using modern card layouts.
+- **Projects**: Displayed "FashNova", "Booksky", and "Quiz Game" with hover effects and tech stack tags.
+- **Experience & Education**: A split timeline design for easy reading.
+- **Certifications**: Card grid for your MongoDB and Excel certifications.
+- **Contact**: A functional-looking contact form and social links.
+
+## How to Run
+Simply open the [index.html](file:///d:/PraneshDocuments/PraneshPortfolio/index.html) file in your browser.
+1. Go to `d:\PraneshDocuments\PraneshPortfolio\`
+2. Double click [index.html](file:///d:/PraneshDocuments/PraneshPortfolio/index.html)
+
+## Customization
+- **Images**: You can replace the placeholder images in the `project-image` divs or the avatar icon.
+- **Links**: Update the `href="#"` in [index.html](file:///d:/PraneshDocuments/PraneshPortfolio/index.html) with your actual LinkedIn/GitHub URLs and Resume path.
