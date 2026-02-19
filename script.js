@@ -46,24 +46,4 @@ window.addEventListener('scroll', () => {
 });
 
 // Blast Confetti on "Send Message" (Mock functionality)
-const form = document.querySelector('.contact-form');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button');
-    const originalText = btn.innerText;
-    
-    btn.innerText = "Sending...";
-    
-    setTimeout(() => {
-        btn.innerText = "Message Sent!";
-        btn.style.backgroundColor = "var(--accent-color)";
-        btn.style.color = "var(--bg-color)";
-        form.reset();
-        
-        setTimeout(() => {
-            btn.innerText = originalText;
-            btn.style.backgroundColor = "";
-            btn.style.color = "";
-        }, 3000);
-    }, 1500);
-});
+// Contact form handling is now native (mailto)
