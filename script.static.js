@@ -46,4 +46,24 @@ window.addEventListener('scroll', () => {
 });
 
 // Blast Confetti on "Send Message" (Mock functionality)
-// Contact form handling is now native (mailto)
+// Force Download Resume
+document.querySelector('a[download]').addEventListener('click', function (e) {
+    e.preventDefault();
+    const url = this.getAttribute('href');
+    const filename = 'Pranesh_B_Resume.pdf';
+
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(blobUrl);
+            document.body.removeChild(a);
+        })
+        .catch(() => window.location.href = url); // Fallback
+});
