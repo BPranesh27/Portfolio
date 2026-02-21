@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
-import logo from '../assets/Porfolio logo.jpg';
+import logo from '../assets/Pranesh Photo.jpeg';
 
 const Navbar = ({ theme, toggleTheme }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,9 @@ const Navbar = ({ theme, toggleTheme }) => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
-                <a href="#" className="logo">PRANESH B</a>
+                <a href="#" className="logo">
+                    <img src={logo} alt="PRANESH B" className="nav-logo-img" />
+                </a>
 
                 <div className="nav-controls">
                     <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">

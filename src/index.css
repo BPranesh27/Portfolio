@@ -257,6 +257,16 @@ section {
   font-weight: 700;
   font-family: var(--font-heading);
   color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
 }
 
 .nav-menu {
