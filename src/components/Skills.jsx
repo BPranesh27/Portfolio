@@ -22,6 +22,14 @@ const Skills = () => {
             ]
         },
         {
+            title: 'Backend Tech',
+            items: [
+                { name: 'Spring Boot', icon: <i className="devicon-spring-plain colored"></i> },
+                { name: 'RESTful APIs', icon: <Server size={20} className="highlight" /> },
+                { name: 'Spring Data JPA', icon: <Database size={20} className="highlight" /> },
+            ]
+        },
+        {
             title: 'Databases & Tools',
             items: [
                 { name: 'SQL', icon: <i className="devicon-mysql-plain colored"></i> },

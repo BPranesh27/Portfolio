@@ -4,8 +4,8 @@ import { Database, Server, Table } from 'lucide-react';
 
 const Certifications = () => {
     const certs = [
-        { title: 'MongoDB Vector Search', issuer: 'MongoDB', icon: <Database /> },
-        { title: 'MongoDB RAG Apps', issuer: 'MongoDB', icon: <Server /> },
+        { title: 'Innovation Through Design', issuer: 'Coursera', icon: <Layout /> },
+        { title: 'Building RAG Apps', issuer: 'MongoDB', icon: <Server /> },
         { title: 'Microsoft Excel', issuer: 'Coursera', icon: <Table /> },
     ];
 

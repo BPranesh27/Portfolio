@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const About = () => {
     const stats = [
         { label: 'CGPA', value: '8.46' },
-        { label: 'Major Projects', value: '3+' },
+        { label: 'Major Projects', value: '3' },
         { label: 'Internship', value: 'Exp.' },
     ];
 

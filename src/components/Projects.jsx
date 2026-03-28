@@ -5,29 +5,27 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
     const projects = [
         {
-            title: 'FashNova',
-            role: 'Fashion E-Commerce Website',
-            desc: 'A responsive e-commerce UI featuring dynamic side navigation, smooth CSS animations, and an interactive product display system.',
-            tech: ['HTML', 'CSS', 'JS', 'Responsive UI'],
-            live: 'https://github.com/BPranesh27/FashNova',
-            github: 'https://github.com/BPranesh27/FashNova',
+            title: 'BuildTrack',
+            role: 'Construction Project Expense Management System',
+            desc: 'A full-stack construction expense management system featuring a real-time dashboard for tracking project status and financial summaries. Built with React.js and Spring Boot.',
+            tech: ['React.js', 'Spring Boot', 'RESTful APIs', 'MySQL'],
+            github: 'https://github.com/BPranesh27/BuildTrack',
             color: 'color-1'
         },
         {
-            title: 'Booksky',
-            role: 'Frontend Web Application',
-            desc: 'A responsive book showcase platform utilizing advanced DOM manipulation for dynamic content and interactive blog card popups.',
-            tech: ['JavaScript', 'DOM', 'Clean UI/UX'],
-            live: 'https://github.com/BPranesh27/BookSky-Web-Application',
-            github: 'https://github.com/BPranesh27/BookSky-Web-Application',
+            title: 'VelvetMoments',
+            role: 'Full Stack Event Management Platform',
+            desc: 'A secure full-stack event management application featuring JWT-based authentication and integrated dynamic content management for real-time updates.',
+            tech: ['React.js', 'Spring Boot', 'Spring Security', 'MySQL'],
+            github: 'https://github.com/BPranesh27/VelvetMoments',
             color: 'color-2'
         },
         {
-            title: 'Quiz Game',
-            role: 'Java Console Application',
-            desc: 'A gamified console application featuring multiple quiz modules, strict input validation, and robust logic building.',
-            tech: ['Java', 'OOP', 'Logic Building'],
-            github: 'https://github.com/BPranesh27/Quiz-Game',
+            title: 'FashNova',
+            role: 'Fashion E-Commerce Website',
+            desc: 'A responsive e-commerce website featuring dynamic side navigation, smooth CSS animations, and transition effects to elevate user engagement.',
+            tech: ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
+            github: 'https://github.com/BPranesh27/FashNova',
             color: 'color-3'
         }
     ];
