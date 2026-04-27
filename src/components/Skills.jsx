@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Layout, Code, Terminal, GitBranch, Monitor } from 'lucide-react';
+import { Database, Layout, Code, Terminal, GitBranch, Monitor, Server } from 'lucide-react';
 
 const Skills = () => {
     const skillCategories = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Server, Table } from 'lucide-react';
+import { Database, Server, Table, Layout } from 'lucide-react';
 
 const Certifications = () => {
     const certs = [
