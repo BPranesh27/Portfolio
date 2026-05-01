@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     const stats = [
-        { label: 'CGPA', value: '8.46' },
-        { label: 'Major Projects', value: '3' },
-        { label: 'Internship', value: 'Exp.' },
+        { label: 'Academic CGPA', value: '8.21' },
+        { label: 'Enterprise Projects', value: '3+' },
+        { label: 'Technical Proficiency', value: 'High' },
     ];
 
     return (
@@ -17,7 +17,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    About <span>Me</span>
+                    Professional <span>Background</span>
                 </motion.h2>
 
                 <div className="about-content">
@@ -29,19 +29,18 @@ const About = () => {
                         viewport={{ once: true }}
                     >
                         <p>
-                            I am a <strong>B.Tech Artificial Intelligence & Data Science</strong> student at Rathinam
-                            Technical Campus with a strong passion for software development.
-                            My journey involves bridging the gap between intelligent data systems and interactive user
-                            experiences.
+                            I am a <strong>Software Developer</strong> specializing in Artificial Intelligence and Data Science at Rathinam
+                            Technical Campus. My engineering approach is centered on bridging the gap between intelligent data systems and 
+                            robust enterprise software architectures.
                         </p>
                         <p>
-                            I focus on building <strong>responsive, scalable, and interactive web applications</strong>.
-                            With a foundation in both AI concepts and full-stack development, I aim to create solutions that
-                            are not only functional but also intuitive and engaging.
+                            I focus on building <strong>scalable, high-performance applications</strong> that prioritize data integrity and 
+                            user efficiency. With a strong foundation in Java, SQL, and full-stack development, I aim to deliver solutions 
+                            that solve tangible business challenges.
                         </p>
                         <p>
-                            <strong>Goal:</strong> Seeking entry-level Software / Full-Stack Developer roles where I can
-                            contribute to innovative projects and continue to grow as a developer.
+                            <strong>Professional Goal:</strong> To contribute to an innovative engineering team, specifically within the 
+                            <strong>SAP/ERP</strong> ecosystem, where I can leverage my problem-solving skills to drive organizational impact.
                         </p>
                     </motion.div>
 

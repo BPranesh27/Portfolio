@@ -1,40 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Layout, Code, Terminal, GitBranch, Monitor, Server } from 'lucide-react';
+import { Database, Code, Terminal, Server, Cpu, Globe, Zap } from 'lucide-react';
 
 const Skills = () => {
     const skillCategories = [
         {
-            title: 'Languages',
+            title: 'Core Engineering',
             items: [
-                { name: 'Java', icon: <i className="devicon-java-plain colored"></i> },
-                { name: 'Python', icon: <i className="devicon-python-plain colored"></i> },
-                { name: 'C', icon: <i className="devicon-c-plain colored"></i> },
+                { name: 'Java (OOP)', icon: <i className="devicon-java-plain colored"></i> },
+                { name: 'SQL & RDBMS', icon: <i className="devicon-mysql-plain colored"></i> },
+                { name: 'C Programming', icon: <i className="devicon-c-plain colored"></i> },
+                { name: 'Data Structures', icon: <Cpu size={20} className="highlight" /> },
             ]
         },
         {
-            title: 'Web Tech',
-            items: [
-                { name: 'HTML5', icon: <i className="devicon-html5-plain colored"></i> },
-                { name: 'CSS3', icon: <i className="devicon-css3-plain colored"></i> },
-                { name: 'JavaScript', icon: <i className="devicon-javascript-plain colored"></i> },
-                { name: 'React', icon: <i className="devicon-react-original colored"></i> },
-            ]
-        },
-        {
-            title: 'Backend Tech',
+            title: 'Enterprise Stack',
             items: [
                 { name: 'Spring Boot', icon: <i className="devicon-spring-plain colored"></i> },
                 { name: 'RESTful APIs', icon: <Server size={20} className="highlight" /> },
-                { name: 'Spring Data JPA', icon: <Database size={20} className="highlight" /> },
+                { name: 'JWT Security', icon: <Zap size={20} className="highlight" /> },
+                { name: 'React.js', icon: <i className="devicon-react-original colored"></i> },
             ]
         },
         {
-            title: 'Databases & Tools',
+            title: 'Analytical & Intelligence',
             items: [
-                { name: 'SQL', icon: <i className="devicon-mysql-plain colored"></i> },
-                { name: 'MongoDB', icon: <i className="devicon-mongodb-plain colored"></i> },
-                { name: 'Git', icon: <i className="devicon-git-plain colored"></i> },
+                { name: 'Python', icon: <i className="devicon-python-plain colored"></i> },
+            ]
+        },
+        {
+            title: 'Professional Workflow',
+            items: [
+                { name: 'Git / Version Control', icon: <i className="devicon-git-plain colored"></i> },
+                { name: 'Postman (API Testing)', icon: <Globe size={20} className="highlight" /> },
                 { name: 'VS Code', icon: <i className="devicon-vscode-plain colored"></i> },
             ]
         }
@@ -49,7 +47,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    My <span>Skills</span>
+                    Engineering <span>Capabilities</span>
                 </motion.h2>
 
                 <div className="skills-grid">
@@ -74,6 +72,7 @@ const Skills = () => {
                         </motion.div>
                     ))}
                 </div>
+
             </div>
         </section>
     );

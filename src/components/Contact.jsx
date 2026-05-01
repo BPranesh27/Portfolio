@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -12,7 +12,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    Contact <span>Me</span>
+                    Let's <span>Connect</span>
                 </motion.h2>
                 <div className="contact-wrapper">
                     <motion.div
@@ -22,26 +22,32 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <h3>Let’s Build Something Exceptional</h3>
-                        <p>I'm currently available for full-time opportunities and internships. If you have a project in mind or just want to say hi, feel free to reach out!</p>
+                        <h3>Recruitment & Partnerships</h3>
+                        <p>
+                            I am currently seeking opportunities to apply my engineering skills in an enterprise setting. 
+                            Whether you are looking for a dedicated <strong>Software Developer</strong> or a <strong>Solution Engineer</strong> for SAP/ERP projects, 
+                            I'd love to discuss how I can contribute to your team's success.
+                        </p>
 
-                        <div className="contact-details">
-                            <div className="contact-item">
-                                <Mail className="highlight" size={20} />
-                                <span>bpranesh594@gmail.com</span>
-                            </div>
-                            <div className="contact-item">
-                                <Phone className="highlight" size={20} />
-                                <span>9751838476</span>
-                            </div>
-                            <div className="contact-item">
-                                <Linkedin className="highlight" size={20} />
-                                <a href="https://www.linkedin.com/in/pranesh27/">linkedin.com/in/pranesh27</a>
-                            </div>
-                            <div className="contact-item">
-                                <Github className="highlight" size={20} />
-                                <a href="https://github.com/BPranesh27">github.com/BPranesh27</a>
-                            </div>
+                        <div className="contact-links">
+                            <a href="mailto:bpranesh594@gmail.com" className="contact-card-link">
+                                <Mail size={24} />
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pranesh27/" target="_blank" rel="noopener noreferrer" className="contact-card-link">
+                                <Linkedin size={24} />
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/BPranesh27" target="_blank" rel="noopener noreferrer" className="contact-card-link">
+                                <Github size={24} />
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                        
+                        <div className="direct-cta">
+                            <a href="mailto:bpranesh594@gmail.com" className="btn btn-primary">
+                                Schedule a Technical Discussion <MessageSquare size={18} style={{ marginLeft: '8px', verticalAlign: 'middle' }} />
+                            </a>
                         </div>
                     </motion.div>
                 </div>

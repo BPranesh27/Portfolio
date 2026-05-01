@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -25,15 +25,11 @@ const Navbar = ({ theme, toggleTheme }) => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
-                <a href="#" className="logo">
-                    PRANESH B
+                <a href="https://bpranesh27.github.io/Portfolio/#" className="logo">
+                    PRANESH <span>B</span>
                 </a>
 
                 <div className="nav-controls">
-                    <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-                        {theme === 'dark' ? <Sun size={20} color="var(--accent-color)" /> : <Moon size={20} color="var(--accent-color)" />}
-                    </button>
-
                     <div className="menu-toggle" onClick={toggleMenu}>
                         {isOpen ? <X color="var(--accent-color)" /> : <Menu color="var(--accent-color)" />}
                     </div>
@@ -48,8 +44,8 @@ const Navbar = ({ theme, toggleTheme }) => {
                         </li>
                     ))}
                     <li>
-                        <a href="#contact" className="nav-link btn-cta" onClick={() => setIsOpen(false)}>
-                            Contact Me
+                        <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.9rem' }} onClick={() => setIsOpen(false)}>
+                            Let's Connect
                         </a>
                     </li>
                 </ul>
