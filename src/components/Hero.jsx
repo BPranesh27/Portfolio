@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Award, GraduationCap } from 'lucide-react';
+import { ArrowRight, Download, Award, GraduationCap } from 'lucide-react';
 import profilePic from '../assets/PRANESH B.jpeg';
 
 
@@ -42,13 +42,12 @@ const Hero = ({ theme }) => {
                                 Explore Projects <ArrowRight size={18} />
                             </a>
                             <a 
-                                href={gmailLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                                href="/PRANESH B Resume.pdf" 
+                                download="PRANESH B Resume.pdf"
                                 className="btn btn-outline" 
                                 style={{ marginLeft: '16px' }}
                             >
-                                Let's Connect <Mail size={18} />
+                                Download Resume <Download size={18} />
                             </a>
                         </div>
                     </motion.div>
