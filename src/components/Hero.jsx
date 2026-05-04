@@ -42,7 +42,7 @@ const Hero = ({ theme }) => {
                                 Explore Projects <ArrowRight size={18} />
                             </a>
                             <a 
-                                href="/PRANESH_B_Resume.pdf" 
+                                href="./PRANESH_B_Resume.pdf" 
                                 download="PRANESH_B_Resume.pdf"
                                 className="btn btn-outline" 
                                 style={{ marginLeft: '16px' }}
