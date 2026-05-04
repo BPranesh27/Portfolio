@@ -1,31 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ValueProposition from './components/ValueProposition'
 import About from './components/About'
 import Skills from './components/Skills'
-import ProblemSolving from './components/ProblemSolving'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Certifications from './components/Certifications'
+import Workshops from './components/Workshops'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './index.css'
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <div className="app">
-      <div className="bg-animation">
-        <div className="bg-pattern"></div>
-      </div>
-
-      <Navbar />
-      <Hero />
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Hero theme={theme} />
+      <ValueProposition />
       <About />
       <Skills />
-      <ProblemSolving />
       <Projects />
       <Experience />
       <Certifications />
+      <Workshops />
       <Contact />
       <Footer />
     </div>

@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     const stats = [
-        { label: 'Academic CGPA', value: '8.21' },
-        { label: 'Enterprise Projects', value: '3+' },
-        { label: 'Technical Proficiency', value: 'High' },
+        { label: 'Current CGPA', value: '8.21' },
+        { label: 'Full Stack Projects', value: '3+' },
+        { label: 'Certifications', value: '5+' },
     ];
 
     return (
-        <section id="about" className="section about">
+        <section id="about" className="about">
             <div className="container">
                 <motion.h2
                     className="section-title"
@@ -17,10 +17,15 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    Professional <span>Background</span>
+                    Professional <span className="highlight">Background</span>
                 </motion.h2>
 
-                <div className="about-content">
+                <div className="about-grid" style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: '1.2fr 0.8fr', 
+                    gap: '48px',
+                    alignItems: 'center'
+                }}>
                     <motion.div
                         className="about-text"
                         initial={{ opacity: 0, x: -30 }}
@@ -28,34 +33,37 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <p>
-                            I am a <strong>Software Developer</strong> specializing in Artificial Intelligence and Data Science at Rathinam
-                            Technical Campus. My engineering approach is centered on bridging the gap between intelligent data systems and 
-                            robust enterprise software architectures.
+                        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '24px' }}>
+                            I am a <strong className="highlight">Software Developer</strong> with a specialized focus on building robust enterprise applications. 
+                            My engineering approach is centered on creating scalable architectures that bridge the gap between intelligent data systems 
+                            and high-performance software.
                         </p>
-                        <p>
-                            I focus on building <strong>scalable, high-performance applications</strong> that prioritize data integrity and 
-                            user efficiency. With a strong foundation in Java, SQL, and full-stack development, I aim to deliver solutions 
-                            that solve tangible business challenges.
+                        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '24px' }}>
+                            I specialize in <strong className="highlight">React, Spring Boot, and MySQL</strong>, with a strong commitment to writing clean, 
+                            maintainable code and implementing advanced security protocols like JWT authentication.
                         </p>
-                        <p>
-                            <strong>Professional Goal:</strong> To contribute to an innovative engineering team, specifically within the 
-                            <strong>SAP/ERP</strong> ecosystem, where I can leverage my problem-solving skills to drive organizational impact.
+                        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+                            Currently pursuing B.Tech in AI & Data Science, I am dedicated to continuous learning, evidenced by my certifications in 
+                            SAP Joule and multiple full-stack technologies.
                         </p>
                     </motion.div>
 
-                    <div className="about-stats">
+                    <div className="about-stats" style={{ 
+                        display: 'grid', 
+                        gap: '24px' 
+                    }}>
                         {stats.map((stat, index) => (
                             <motion.div
-                                key={stat.label}
-                                className="stat-card"
+                                key={index}
+                                className="skill-card"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
+                                style={{ textAlign: 'center' }}
                             >
-                                <h3>{stat.value}</h3>
-                                <p>{stat.label}</p>
+                                <h3 style={{ fontSize: '2.5rem', marginBottom: '8px' }}>{stat.value}</h3>
+                                <p className="text-secondary" style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.85rem' }}>{stat.label}</p>
                             </motion.div>
                         ))}
                     </div>

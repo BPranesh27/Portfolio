@@ -1,60 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, ExternalLink } from 'lucide-react';
+
+import certInternship from '../assets/Pranesh InternBoot internship Certificate.pdf';
+
 
 const Experience = () => {
     return (
-        <section id="experience" className="section split-section">
+        <section id="experience" className="experience">
             <div className="container">
-                <div className="split-container">
-
+                <div className="experience-grid" style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+                    gap: '48px' 
+                }}>
+                    
                     {/* Professional Development */}
                     <motion.div
-                        className="split-col"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="col-title"><Briefcase className="highlight" /> Experience</h2>
-                        <div className="timeline-item">
-                            <div className="timeline-dot"></div>
-                            <div className="timeline-content">
-                                <h3>Web Development Intern</h3>
-                                <span className="timeline-date">InternBoot | Sept 2025</span>
-                                <ul>
-                                    <li>Architected responsive frontend modules for enterprise-grade applications.</li>
-                                    <li>Implemented interactive data visualization components using CSS & JavaScript.</li>
-                                    <li>Streamlined version control workflows and collaborative development practices.</li>
-                                </ul>
-                            </div>
+                        <h2 className="section-title" style={{ textAlign: 'left', fontSize: '1.75rem', marginBottom: '32px' }}>
+                            <Briefcase className="highlight" style={{ marginRight: '12px' }} /> Professional Experience
+                        </h2>
+                        
+                        <div className="skill-card" style={{ marginBottom: '24px', borderLeft: '4px solid var(--accent-gold)' }}>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>Web Development Intern</h3>
+                            <p className="highlight" style={{ fontSize: '0.9rem', marginBottom: '16px', fontWeight: '500' }}>InternBoot | Sept 2025</p>
+                            <ul style={{ color: 'var(--text-secondary)', paddingLeft: '20px', marginBottom: '16px' }}>
+                                <li style={{ marginBottom: '8px' }}>Built 4+ responsive UI modules for enterprise web applications using React and JavaScript.</li>
+                                <li style={{ marginBottom: '8px' }}>Developed interactive data visualization components reducing manual reporting steps.</li>
+                                <li>Maintained clean Git commit history, improving team collaboration and review turnaround.</li>
+                            </ul>
+                            <a 
+                                href={certInternship} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="highlight"
+                                style={{ 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    fontSize: '0.85rem', 
+                                    fontWeight: '600',
+                                    textDecoration: 'none',
+                                    gap: '6px'
+                                }}
+                            >
+                                View Internship Certificate <ExternalLink size={14} />
+                            </a>
                         </div>
                     </motion.div>
 
                     {/* Academic Foundation */}
                     <motion.div
-                        className="split-col"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="col-title"><GraduationCap className="highlight" /> Education</h2>
-                        <div className="timeline-item">
-                            <div className="timeline-dot"></div>
-                            <div className="timeline-content">
-                                <h3>B.Tech - AI & Data Science</h3>
-                                <span className="timeline-date">Rathinam Technical Campus | 2023 - Present</span>
-                                <p className="gpa">Academic Performance: <strong>8.21 CGPA</strong></p>
-                            </div>
+                        <h2 className="section-title" style={{ textAlign: 'left', fontSize: '1.75rem', marginBottom: '32px' }}>
+                            <GraduationCap className="highlight" style={{ marginRight: '12px' }} /> Academic Foundation
+                        </h2>
+                        
+                        <div className="skill-card" style={{ marginBottom: '24px', borderLeft: '4px solid var(--accent-gold)' }}>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>B.Tech - AI & Data Science</h3>
+                            <p className="highlight" style={{ fontSize: '0.9rem', marginBottom: '8px', fontWeight: '500' }}>Rathinam Technical Campus | 2023 - Present</p>
+                            <p className="text-primary" style={{ fontWeight: '600' }}>Academic Performance: 8.21 CGPA</p>
                         </div>
-                        <div className="timeline-item">
-                            <div className="timeline-dot"></div>
-                            <div className="timeline-content">
-                                <h3>HSC (Science & Mathematics)</h3>
-                                <span className="timeline-date">SRI.A Ramasamy Matric Higher Secondary School | 2022 - 2023</span>
-                                <p className="gpa">Academic Performance: <strong>84.67%</strong></p>
-                            </div>
+
+                        <div className="skill-card" style={{ borderLeft: '4px solid var(--accent-gold)' }}>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>HSC (Science & Mathematics)</h3>
+                            <p className="highlight" style={{ fontSize: '0.9rem', marginBottom: '8px', fontWeight: '500' }}>SRI.A Ramasamy Matric Higher Secondary School | 2022 - 2023</p>
+                            <p className="text-primary" style={{ fontWeight: '600' }}>Academic Performance: 84.67%</p>
                         </div>
                     </motion.div>
 

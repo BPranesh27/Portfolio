@@ -3,31 +3,31 @@ import { motion } from 'framer-motion';
 import { Search, Lightbulb, Code, CheckCircle } from 'lucide-react';
 
 const ProblemSolving = () => {
-    const steps = [
+    const skills = [
         {
-            title: 'Analyze & Diagnose',
-            icon: <Search size={24} />,
-            desc: 'I deep-dive into business requirements to identify core pain points, edge cases, and scalability constraints before writing a single line of code.'
-        },
-        {
-            title: 'Architect for Scalability',
-            icon: <Lightbulb size={24} />,
-            desc: 'I design solutions using industry-standard patterns (OOP, REST, RDBMS) ensuring the system is maintainable, secure, and ready for enterprise growth.'
-        },
-        {
-            title: 'Iterative Development',
+            title: 'LeetCode Proficiency',
             icon: <Code size={24} />,
-            desc: 'Implementation focus on clean code, robust data handling, and thorough unit testing to ensure high-quality, bug-resistant delivery.'
+            desc: 'Actively solving problems on LeetCode using Java, maintaining a consistent daily practice as part of placement preparation.'
         },
         {
-            title: 'Verify & Optimize',
+            title: 'Core Algorithms',
+            icon: <Search size={24} />,
+            desc: 'Focused on foundational patterns: Arrays, Prefix Sums, Sliding Window, and Recursion for efficient data processing.'
+        },
+        {
+            title: 'Pattern Recognition',
+            icon: <Lightbulb size={24} />,
+            desc: 'Comfortable with identifying and implementing linear and two-pointer strategies to optimize time and space complexity.'
+        },
+        {
+            title: 'Systematic Approach',
             icon: <CheckCircle size={24} />,
-            desc: 'Post-deployment analysis to verify impact, optimize performance, and ensure the solution delivers long-term business value.'
+            desc: 'Breaking down complex algorithmic challenges into manageable sub-problems with a focus on edge cases and scalability.'
         }
     ];
 
     return (
-        <section id="approach" className="section approach" style={{ backgroundColor: 'var(--section-bg)' }}>
+        <section id="dsa" className="section approach" style={{ backgroundColor: 'var(--section-bg)' }}>
             <div className="container">
                 <motion.h2
                     className="section-title"
@@ -35,13 +35,13 @@ const ProblemSolving = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    Solving <span>Business Challenges</span>
+                    DSA & <span>Problem Solving</span>
                 </motion.h2>
 
                 <div className="approach-grid">
-                    {steps.map((step, index) => (
+                    {skills.map((skill, index) => (
                         <motion.div
-                            key={step.title}
+                            key={skill.title}
                             className="approach-card"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -49,10 +49,10 @@ const ProblemSolving = () => {
                             viewport={{ once: true }}
                         >
                             <div className="approach-icon">
-                                {step.icon}
+                                {skill.icon}
                             </div>
-                            <h3>{step.title}</h3>
-                            <p>{step.desc}</p>
+                            <h3>{skill.title}</h3>
+                            <p>{skill.desc}</p>
                         </motion.div>
                     ))}
                 </div>

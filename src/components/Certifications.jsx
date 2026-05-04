@@ -1,69 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Cpu, Code, FileSpreadsheet, ExternalLink } from 'lucide-react';
+import { Award, Shield, Code, Database, ExternalLink } from 'lucide-react';
+
+// Import certification assets
+import certSAP from '../assets/SAP Joule in Finance certificate.pdf';
+import certAnthropic from '../assets/Anthropic Claude 101.pdf';
+import certJS from '../assets/Namaste JavaScript.webp';
+import certExcel from '../assets/PRANESH Coursera MS Excel.pdf';
 
 const Certifications = () => {
     const certs = [
         { 
             title: 'Demonstrating SAP Joule in Finance', 
             issuer: 'SAP', 
-            icon: <Briefcase size={28} />,
-            desc: 'Leveraging AI-driven insights for financial operations.'
+            icon: <Award size={28} />,
+            desc: 'Leveraging AI-driven insights for financial operations.',
+            link: certSAP
         },
         { 
             title: 'Anthropic AI Certification', 
             issuer: 'Anthropic', 
-            icon: <Cpu size={28} />,
-            desc: 'Advanced prompt engineering and AI integration strategies.'
+            icon: <Shield size={28} />,
+            desc: 'Advanced prompt engineering and AI integration strategies.',
+            link: certAnthropic
         },
         { 
             title: 'JavaScript — NamasteDev', 
             issuer: 'NamasteDev', 
             icon: <Code size={28} />,
-            desc: 'In-depth mastery of core JavaScript and modern ES6+ concepts.'
+            desc: 'In-depth mastery of core JavaScript and modern ES6+ concepts.',
+            link: certJS
         },
         { 
             title: 'Microsoft Excel — Coursera', 
             issuer: 'Coursera', 
-            icon: <FileSpreadsheet size={28} />,
-            desc: 'Data analysis, visualization, and advanced spreadsheet modeling.'
+            icon: <Database size={28} />,
+            desc: 'Data analysis, visualization, and advanced spreadsheet modeling.',
+            link: certExcel
         },
     ];
 
     return (
-        <section id="certifications" className="section certifications">
+        <section id="certifications" className="certifications">
             <div className="container">
-                <motion.div
-                    className="section-header"
+                <motion.h2 
+                    className="section-title"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">Professional <span>Validation</span></h2>
-                    <p className="section-subtitle">Demonstrating technical expertise through industry-recognized certifications</p>
-                </motion.div>
+                    Industry <span className="highlight">Certifications</span>
+                </motion.h2>
 
-                <div className="certs-grid-premium">
+                <div className="skills-grid">
                     {certs.map((cert, index) => (
-                        <motion.div
-                            key={cert.title}
-                            className="cert-card-premium"
-                            initial={{ opacity: 0, y: 30 }}
+                        <motion.a
+                            key={index}
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="skill-card certification-card"
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            whileHover={{ y: -10 }}
+                            style={{ textDecoration: 'none', color: 'inherit', display: 'block', position: 'relative' }}
                         >
-                            <div className="cert-icon-wrapper">
-                                {cert.icon}
+                            <div className="highlight" style={{ marginBottom: '16px' }}>{cert.icon}</div>
+                            <span className="highlight" style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>{cert.issuer}</span>
+                            <h3 style={{ margin: '8px 0', fontSize: '1.25rem' }}>{cert.title}</h3>
+                            <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '12px' }}>{cert.desc}</p>
+                            
+                            <div className="cert-link-hint" style={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                fontSize: '0.8rem', 
+                                fontWeight: '600',
+                                color: 'var(--primary)'
+                            }}>
+                                View Certificate <ExternalLink size={14} style={{ marginLeft: '4px' }} />
                             </div>
-                            <div className="cert-content">
-                                <span className="cert-issuer">{cert.issuer}</span>
-                                <h3 className="cert-name">{cert.title}</h3>
-                                <p className="cert-desc">{cert.desc}</p>
-                            </div>
-                            <div className="cert-decoration"></div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
@@ -72,3 +89,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+

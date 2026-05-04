@@ -1,89 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Database, Layers, Layout } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
         {
             title: 'BuildTrack',
-            role: 'Enterprise Construction Resource Management',
-            problem: 'Fragmented construction workflows lead to data silos and manual reconciliation errors in large-scale projects.',
-            solution: 'Engineered a centralized Spring Boot & React platform to consolidate financial tracking and project resource data.',
-            impact: 'Reduced month-end reporting time by streamlining data accessibility for project stakeholders.',
-            tech: ['Java', 'Spring Boot', 'SQL', 'React.js'],
-            github: 'https://github.com/BPranesh27/BuildTrack',
-            color: 'color-1',
-            featured: true
+            subtitle: 'Construction Project Expense Management System',
+            tech: ['Spring Boot', 'MySQL', 'React', 'JWT'],
+            points: [
+                'Developed a real-world expense tracking system for construction workflows',
+                'Built dashboard and expense ledger with categorized cost tracking',
+                'Implemented file/image upload for invoices and documentation'
+            ],
+            github: 'https://github.com/BPranesh27/BuildTrack'
         },
         {
             title: 'Clientrix',
-            role: 'Freelancer Project & Invoice Management System',
-            problem: 'Freelancers often struggle with manual invoice tracking and fragmented client data management.',
-            solution: 'Built a scalable full-stack SaaS platform with JWT authentication and a secure multi-tenant architecture.',
-            impact: 'Implemented transactional invoice generation and strict data isolation, ensuring professional financial management.',
-            tech: ['Spring Boot', 'MySQL', 'React (Vite)', 'Tailwind CSS', 'JWT', 'OpenPDF'],
-            github: 'https://github.com/BPranesh27/Clientrix',
-            color: 'color-3'
+            subtitle: 'Freelancer Project & Invoice Management System',
+            tech: ['Spring Boot', 'MySQL', 'React (Vite)', 'Tailwind CSS', 'JWT'],
+            points: [
+                'Built a scalable SaaS platform with multi-tenant architecture',
+                'Implemented secure JWT authentication and invoice generation',
+                'Designed transactional system for handling invoices and time logs'
+            ],
+            github: 'https://github.com/BPranesh27/Clientrix'
         },
         {
             title: 'VelvetMoments',
-            role: 'Event Resource Optimization Platform',
-            problem: 'Event management teams struggle with insecure data handling and static coordination tools that fail to scale.',
-            solution: 'Developed a JWT-authenticated systems with dynamic content synchronization and automated guest management.',
-            impact: 'Improved operational coordination and data integrity for high-value corporate events.',
-            tech: ['React.js', 'Spring Boot', 'Spring Security', 'MySQL'],
-            github: 'https://github.com/BPranesh27/VelvetMoments',
-            color: 'color-2'
-        },
+            subtitle: 'Event Management Platform',
+            tech: ['React', 'Spring Boot', 'MySQL', 'JPA', 'JWT'],
+            points: [
+                'Developed a secure full-stack event management platform using React and Spring Boot',
+                'Designed and implemented RESTful APIs with MySQL and JPA for efficient data handling',
+                'Built a responsive user interface with real-time gallery and event updates'
+            ],
+            github: 'https://github.com/BPranesh27/VelvetMoments'
+        }
     ];
 
     return (
-        <section id="projects" className="section projects">
+        <section id="projects" className="projects">
             <div className="container">
-                <motion.h2
+                <motion.h2 
                     className="section-title"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    Strategic <span>Solutions</span>
+                    Featured <span className="highlight">Projects</span>
                 </motion.h2>
-
                 <div className="projects-grid">
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={project.title}
-                            className={`project-card ${project.featured ? 'featured' : ''}`}
-                            initial={{ opacity: 0, y: 30 }}
+                        <motion.div 
+                            key={index}
+                            className="project-card"
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <div className="project-info">
-                                <div className="project-header">
-                                    <h3>{project.title}</h3>
-                                    {project.featured && <span className="featured-tag">Featured Case Study</span>}
-                                </div>
-                                <p className="project-role">{project.role}</p>
+                            <div className="project-content">
+                                <h3 className="project-title">{project.title}</h3>
+                                <p className="project-role" style={{ marginBottom: '16px' }}>{project.subtitle}</p>
                                 
-                                <div className="enterprise-framework">
-                                    <div className="framework-item">
-                                        <strong>Problem:</strong> {project.problem}
-                                    </div>
-                                    <div className="framework-item">
-                                        <strong>Solution:</strong> {project.solution}
-                                    </div>
-                                    <div className="framework-item">
-                                        <strong>Impact:</strong> {project.impact}
-                                    </div>
+                                <div className="project-tech" style={{ marginBottom: '20px' }}>
+                                    {project.tech.map((t, ti) => (
+                                        <span key={ti} className="tech-pill">{t}</span>
+                                    ))}
                                 </div>
 
-                                <div className="tech-stack">
-                                    {project.tech.map(t => <span key={t}>{t}</span>)}
-                                </div>
-                                <div className="project-links">
-                                    <a href={project.github} className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>
-                                        <Github size={16} style={{ marginRight: '8px', verticalAlign: 'middle' }} /> Repository
+                                <ul style={{ 
+                                    paddingLeft: '18px', 
+                                    color: 'var(--text-secondary)', 
+                                    fontSize: '0.9rem',
+                                    marginBottom: '24px',
+                                    flex: '1'
+                                }}>
+                                    {project.points.map((point, pi) => (
+                                        <li key={pi} style={{ marginBottom: '8px' }}>{point}</li>
+                                    ))}
+                                </ul>
+
+                                <div style={{ marginTop: 'auto' }}>
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
+                                        <Github size={16} /> Repository
                                     </a>
                                 </div>
                             </div>

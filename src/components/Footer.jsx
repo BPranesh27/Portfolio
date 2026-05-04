@@ -1,22 +1,20 @@
 import React from 'react';
-import { Linkedin, Github, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="container footer-container">
-                <p>&copy; 2026 Pranesh B. All Rights Reserved.</p>
-                <div className="social-links">
-                    <a href="https://www.linkedin.com/in/pranesh27/" target="_blank" rel="noreferrer">
-                        <Linkedin size={20} />
-                    </a>
-                    <a href="https://github.com/BPranesh27" target="_blank" rel="noreferrer">
-                        <Github size={20} />
-                    </a>
-                    <a href="mailto:bpranesh594@gmail.com">
-                        <Mail size={20} />
-                    </a>
-                </div>
+        <footer style={{ 
+            padding: '48px 0', 
+            borderTop: '1px solid var(--glass-border)',
+            textAlign: 'center',
+            background: 'var(--bg-dark)'
+        }}>
+            <div className="container">
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                    &copy; {new Date().getFullYear()} <span className="highlight">PRANESH B</span>. Engineered for Excellence.
+                </p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', marginTop: '8px' }}>
+                    Full Stack Developer & Enterprise Systems Engineer
+                </p>
             </div>
         </footer>
     );
