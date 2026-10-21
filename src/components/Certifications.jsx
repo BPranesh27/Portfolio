@@ -1,43 +1,54 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Shield, Code, Database, ExternalLink } from 'lucide-react';
+import { Award, Shield, Code, Database, ExternalLink, Sparkles, Layers } from 'lucide-react';
 
 // Import certification assets
-import certSAP from '../assets/SAP Joule in Finance certificate.pdf';
+import certML from '../assets/Machine Learning Using Python.pdf';
 import certAnthropic from '../assets/Anthropic Claude 101.pdf';
 import certJS from '../assets/Namaste JavaScript.webp';
-import certExcel from '../assets/PRANESH Coursera MS Excel.pdf';
+import certSQL from '../assets/SQL Certificate.pdf';
+import certJava from '../assets/FullStack Java Simplilearn.pdf';
 
 const Certifications = () => {
-    const certs = [
+    const aiCerts = [
         { 
-            title: 'Demonstrating SAP Joule in Finance', 
-            issuer: 'SAP', 
+            title: 'Machine Learning using Python', 
+            issuer: 'Simplilearn SkillUp', 
             icon: <Award size={28} />,
-            desc: 'Leveraging AI-driven insights for financial operations.',
-            link: certSAP
+            desc: 'Machine learning fundamentals, predictive algorithms, model training, and evaluation with Python.',
+            link: certML
         },
         { 
-            title: 'Anthropic AI Certification', 
+            title: 'Anthropic AI Fundamentals', 
             issuer: 'Anthropic', 
             icon: <Shield size={28} />,
-            desc: 'Advanced prompt engineering and AI integration strategies.',
+            desc: 'Advanced prompt engineering, Claude architecture, and LLM application integration strategies.',
             link: certAnthropic
-        },
+        }
+    ];
+
+    const techCerts = [
         { 
             title: 'JavaScript — NamasteDev', 
             issuer: 'NamasteDev', 
             icon: <Code size={28} />,
-            desc: 'In-depth mastery of core JavaScript and modern ES6+ concepts.',
+            desc: 'In-depth mastery of core JavaScript execution, closures, asynchronous patterns, and modern ES6+.',
             link: certJS
         },
         { 
-            title: 'Microsoft Excel — Coursera', 
-            issuer: 'Coursera', 
+            title: 'MySQL', 
+            issuer: 'Scaler Topics', 
             icon: <Database size={28} />,
-            desc: 'Data analysis, visualization, and advanced spreadsheet modeling.',
-            link: certExcel
+            desc: 'Relational database schema design, complex SQL querying, indexing, and data management.',
+            link: certSQL
         },
+        { 
+            title: 'Full Stack Java Development', 
+            issuer: 'Simplilearn', 
+            icon: <Layers size={28} />,
+            desc: 'Enterprise architecture fundamentals, Java backend services, and full-stack software development.',
+            link: certJava
+        }
     ];
 
     return (
@@ -49,39 +60,105 @@ const Certifications = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    Industry <span className="highlight">Certifications</span>
+                    Professional <span className="highlight">Certifications</span>
                 </motion.h2>
 
-                <div className="skills-grid">
-                    {certs.map((cert, index) => (
-                        <motion.a
-                            key={index}
-                            href={cert.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="skill-card certification-card"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            style={{ textDecoration: 'none', color: 'inherit', display: 'block', position: 'relative' }}
-                        >
-                            <div className="highlight" style={{ marginBottom: '16px' }}>{cert.icon}</div>
-                            <span className="highlight" style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>{cert.issuer}</span>
-                            <h3 style={{ margin: '8px 0', fontSize: '1.25rem' }}>{cert.title}</h3>
-                            <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '12px' }}>{cert.desc}</p>
-                            
-                            <div className="cert-link-hint" style={{ 
-                                display: 'flex', 
-                                alignItems: 'center', 
-                                fontSize: '0.8rem', 
-                                fontWeight: '600',
-                                color: 'var(--primary)'
-                            }}>
-                                View Certificate <ExternalLink size={14} style={{ marginLeft: '4px' }} />
-                            </div>
-                        </motion.a>
-                    ))}
+                {/* Group 1: AI-Related Certifications */}
+                <div style={{ marginBottom: '48px' }}>
+                    <div style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '10px', 
+                        marginBottom: '24px' 
+                    }}>
+                        <Sparkles className="highlight" size={22} />
+                        <h3 style={{ fontSize: '1.35rem', letterSpacing: '0.5px' }}>
+                            AI & Machine Learning Certifications
+                        </h3>
+                    </div>
+
+                    <div className="skills-grid">
+                        {aiCerts.map((cert, index) => (
+                            <motion.a
+                                key={`ai-${index}`}
+                                href={cert.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="skill-card certification-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                style={{ textDecoration: 'none', color: 'inherit', display: 'block', position: 'relative' }}
+                            >
+                                <div className="highlight" style={{ marginBottom: '16px' }}>{cert.icon}</div>
+                                <span className="highlight" style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                    {cert.issuer}
+                                </span>
+                                <h3 style={{ margin: '8px 0', fontSize: '1.25rem' }}>{cert.title}</h3>
+                                <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '16px' }}>{cert.desc}</p>
+                                
+                                <div className="cert-link-hint" style={{ 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    fontSize: '0.8rem', 
+                                    fontWeight: '600',
+                                    color: 'var(--accent-gold)'
+                                }}>
+                                    View Certificate <ExternalLink size={14} style={{ marginLeft: '4px' }} />
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Group 2: Full Stack Development & Other Technical Certifications */}
+                <div>
+                    <div style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '10px', 
+                        marginBottom: '24px' 
+                    }}>
+                        <Layers className="highlight" size={22} />
+                        <h3 style={{ fontSize: '1.35rem', letterSpacing: '0.5px' }}>
+                            Full-Stack Development & Technical Certifications
+                        </h3>
+                    </div>
+
+                    <div className="skills-grid">
+                        {techCerts.map((cert, index) => (
+                            <motion.a
+                                key={`tech-${index}`}
+                                href={cert.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="skill-card certification-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                style={{ textDecoration: 'none', color: 'inherit', display: 'block', position: 'relative' }}
+                            >
+                                <div className="highlight" style={{ marginBottom: '16px' }}>{cert.icon}</div>
+                                <span className="highlight" style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                    {cert.issuer}
+                                </span>
+                                <h3 style={{ margin: '8px 0', fontSize: '1.25rem' }}>{cert.title}</h3>
+                                <p className="text-secondary" style={{ fontSize: '0.9rem', marginBottom: '16px' }}>{cert.desc}</p>
+                                
+                                <div className="cert-link-hint" style={{ 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    fontSize: '0.8rem', 
+                                    fontWeight: '600',
+                                    color: 'var(--accent-gold)'
+                                }}>
+                                    View Certificate <ExternalLink size={14} style={{ marginLeft: '4px' }} />
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
@@ -89,4 +166,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-

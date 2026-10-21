@@ -26,8 +26,8 @@ const Contact = () => {
                         style={{ textAlign: 'center' }}
                     >
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '32px', fontSize: '1.1rem' }}>
-                            I'm currently looking for new opportunities in Full Stack Development and Enterprise Systems. 
-                            Whether you have a question or just want to say hi, my inbox is always open!
+                            I'm currently looking for opportunities in AI/ML and Full-Stack Software Development. 
+                            Whether you have a question, a project collaboration, or an opening, my inbox is always open!
                         </p>
                         
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

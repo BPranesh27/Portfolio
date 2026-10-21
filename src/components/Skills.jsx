@@ -4,28 +4,36 @@ import { motion } from 'framer-motion';
 const Skills = () => {
     const skillCategories = [
         {
+            title: 'AI & Machine Learning',
+            skills: ['LLMs', 'Prompt Engineering', 'RAG', 'LangChain', 'LangGraph']
+        },
+        {
+            title: 'Programming Languages',
+            skills: ['Python', 'Java']
+        },
+        {
             title: 'Frontend Development',
-            skills: ['React.js', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Tailwind CSS', 'Framer Motion']
+            skills: ['React.js', 'JavaScript', 'HTML', 'CSS']
         },
         {
-            title: 'Backend Development',
-            skills: ['Spring Boot', 'Java', 'RESTful APIs', 'JWT Authentication']
+            title: 'Backend Development & APIs',
+            skills: ['FastAPI', 'Spring Boot', 'REST APIs', 'JWT']
         },
         {
-            title: 'Database',
-            skills: ['MySQL', 'Database Design', 'CRUD Operations']
+            title: 'Databases',
+            skills: ['MySQL', 'SQL']
         },
         {
-            title: 'Tools & Platforms',
-            skills: ['Git & GitHub', 'MySQL Workbench', 'Postman', 'VS Code']
+            title: 'Developer Tools & Platforms',
+            skills: ['Git', 'GitHub', 'Postman', 'VS Code']
         },
         {
-            title: 'Enterprise & SAP',
-            skills: ['SAP Joule (Finance & Enterprise AI)', 'SAP Basics (ERP fundamentals)', 'Business Process Optimization']
+            title: 'Automation & AI Tools',
+            skills: ['ChatGPT', 'GitHub Copilot', 'Claude', 'n8n', 'Cursor']
         },
         {
             title: 'Core Concepts',
-            skills: ['Data Structures', 'Object-Oriented Programming (OOP)', 'DBMS']
+            skills: ['OOP', 'DSA', 'DBMS']
         }
     ];
 

@@ -5,6 +5,29 @@ import { Github, ExternalLink } from 'lucide-react';
 const Projects = () => {
     const projects = [
         {
+            title: 'DeedCraft AI',
+            subtitle: 'Automated Legal Deed Generation',
+            tech: ['Python', 'Open-Source LLMs', 'Semantic RAG', 'Knowledge Graph'],
+            points: [
+                'Built an AI-powered legal deed generation system to automate verification of multi-decade parent deeds and Encumbrance Certificates, reducing manual document analysis.',
+                'Engineered a semantic RAG pipeline using open-source LLMs, clause-aware document chunking, and a legal knowledge graph to retrieve and map ownership history and encumbrances.',
+                'Reduced deed generation time from ~8 hours to under 3 minutes, achieving 98.2% extraction accuracy across 5+ records.'
+            ],
+            github: 'https://github.com/BPranesh27/DeedCraft-AI'
+        },
+        {
+            title: 'SpareHub',
+            subtitle: 'Peer-to-Peer Item Rental Platform',
+            tech: ['React.js', 'Spring Boot', 'Java', 'Python', 'FastAPI', 'MySQL', 'JWT', 'REST APIs'],
+            points: [
+                'Developed a full-stack peer-to-peer rental platform using React.js, Spring Boot, and MySQL for item listing, discovery, booking, and rental management.',
+                'Implemented JWT authentication and role-based access control to secure user workflows and backend API access.',
+                'Built REST APIs with Spring Boot for item CRUD operations, availability validation, booking, cancellation, and rental status tracking.',
+                'Integrated a Python/FastAPI AI service with the Spring Boot backend to provide personalized item recommendations based on user preferences and rental activity.'
+            ],
+            github: 'https://github.com/BPranesh27/SpareHub'
+        },
+        {
             title: 'BuildTrack',
             subtitle: 'Construction Project Expense Management System',
             tech: ['Spring Boot', 'MySQL', 'React', 'JWT'],
@@ -82,10 +105,17 @@ const Projects = () => {
                                     ))}
                                 </ul>
 
-                                <div style={{ marginTop: 'auto' }}>
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
-                                        <Github size={16} /> Repository
-                                    </a>
+                                <div style={{ marginTop: 'auto', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
+                                            <Github size={16} /> Repository
+                                        </a>
+                                    )}
+                                    {project.live && (
+                                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
+                                            <ExternalLink size={16} /> Live Demo
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

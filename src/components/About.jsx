@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     const stats = [
-        { label: 'Current CGPA', value: '8.21' },
-        { label: 'Full Stack Projects', value: '3+' },
-        { label: 'Certifications', value: '5+' },
+        { label: 'Current CGPA', value: '8.14' },
+        { label: 'Featured Projects', value: '5' },
+        { label: 'Certifications', value: '5' },
     ];
 
     return (
@@ -34,17 +34,16 @@ const About = () => {
                         viewport={{ once: true }}
                     >
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '24px' }}>
-                            I am a <strong className="highlight">Software Developer</strong> with a specialized focus on building robust enterprise applications. 
-                            My engineering approach is centered on creating scalable architectures that bridge the gap between intelligent data systems 
-                            and high-performance software.
+                            I am an <strong className="highlight">AI and Full-Stack Developer</strong> with hands-on experience building intelligent systems and full-stack software applications. 
+                            My engineering approach combines practical AI integration—working with LLMs, RAG, and prompt engineering—with robust full-stack web architectures.
                         </p>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '24px' }}>
-                            I specialize in <strong className="highlight">React, Spring Boot, and MySQL</strong>, with a strong commitment to writing clean, 
-                            maintainable code and implementing advanced security protocols like JWT authentication.
+                            I build with <strong className="highlight">Python, Java, React.js, FastAPI, Spring Boot, and MySQL</strong>, with a strong focus on clean code, 
+                            secure REST APIs (JWT), and efficient relational database management.
                         </p>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
-                            Currently pursuing B.Tech in AI & Data Science, I am dedicated to continuous learning, evidenced by my certifications in 
-                            SAP Joule and multiple full-stack technologies.
+                            Currently pursuing a B.Tech in Artificial Intelligence and Data Science at Rathinam Technical Campus, I am passionate about engineering 
+                            practical AI solutions, data-driven applications, and continuously mastering modern technologies.
                         </p>
                     </motion.div>
 

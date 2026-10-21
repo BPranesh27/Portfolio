@@ -29,9 +29,8 @@ const Experience = () => {
                             <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>Web Development Intern</h3>
                             <p className="highlight" style={{ fontSize: '0.9rem', marginBottom: '16px', fontWeight: '500' }}>InternBoot | Sept 2025</p>
                             <ul style={{ color: 'var(--text-secondary)', paddingLeft: '20px', marginBottom: '16px' }}>
-                                <li style={{ marginBottom: '8px' }}>Built 4+ responsive UI modules for enterprise web applications using React and JavaScript.</li>
-                                <li style={{ marginBottom: '8px' }}>Developed interactive data visualization components reducing manual reporting steps.</li>
-                                <li>Maintained clean Git commit history, improving team collaboration and review turnaround.</li>
+                                <li style={{ marginBottom: '8px' }}>Developed responsive web pages and frontend features using HTML, CSS, and JavaScript.</li>
+                                <li>Used Git for version control and followed structured development practices.</li>
                             </ul>
                             <a 
                                 href={certInternship} 
@@ -65,7 +64,7 @@ const Experience = () => {
                         <div className="skill-card" style={{ marginBottom: '24px', borderLeft: '4px solid var(--accent-gold)' }}>
                             <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>B.Tech - AI & Data Science</h3>
                             <p className="highlight" style={{ fontSize: '0.9rem', marginBottom: '8px', fontWeight: '500' }}>Rathinam Technical Campus | 2023 - Present</p>
-                            <p className="text-primary" style={{ fontWeight: '600' }}>Academic Performance: 8.21 CGPA</p>
+                            <p className="text-primary" style={{ fontWeight: '600' }}>Academic Performance: 8.14 CGPA</p>
                         </div>
 
                         <div className="skill-card" style={{ borderLeft: '4px solid var(--accent-gold)' }}>

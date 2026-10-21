@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Award, GraduationCap } from 'lucide-react';
-import profilePic from '../assets/PRANESH B.jpeg';
+import profilePic from '../assets/Pranesh B Image.png';
 
 
-const Hero = ({ theme }) => {
-    const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=bpranesh594@gmail.com&su=Hiring%20Opportunity&body=Hi%20Pranesh,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.";
-    
+const Hero = () => {
     return (
         <section id="hero" className="hero">
             <div className="container">
@@ -20,20 +18,21 @@ const Hero = ({ theme }) => {
                         <h1 className="hero-title">
                             PRANESH <span className="highlight">B</span>
                         </h1>
-                        <h2 className="hero-role">Full Stack Developer & Software Engineer</h2>
+                        <h2 className="hero-role">AI & Full-Stack Developer</h2>
                         <p className="hero-desc">
-                            Specializing in building scalable, secure applications with React, Spring Boot, and MySQL. 
-                            Focused on engineering robust systems and exploring enterprise-grade software development.
+                            Aspiring AI and Full-Stack Developer with hands-on experience building intelligent applications 
+                            and web platforms using Python, LLMs, RAG, React.js, and Spring Boot. Focused on engineering practical 
+                            AI solutions, robust REST APIs, and scalable software systems.
                         </p>
                         
                         <div className="hero-highlights">
                             <div className="highlight-item">
-                                <span className="highlight-val"><GraduationCap size={20} style={{ marginRight: '8px' }} /> 8.21</span>
+                                <span className="highlight-val"><GraduationCap size={20} style={{ marginRight: '8px' }} /> 8.14</span>
                                 <span className="highlight-label">Current CGPA</span>
                             </div>
                             <div className="highlight-item">
-                                <span className="highlight-val"><Award size={20} style={{ marginRight: '8px' }} /> Java & React</span>
-                                <span className="highlight-label">Core Tech Stack</span>
+                                <span className="highlight-val"><Award size={20} style={{ marginRight: '8px' }} /> AI & Full-Stack</span>
+                                <span className="highlight-label">Core Focus</span>
                             </div>
                         </div>
 
@@ -42,8 +41,8 @@ const Hero = ({ theme }) => {
                                 Explore Projects <ArrowRight size={18} />
                             </a>
                             <a 
-                                href="./PRANESH_B_Resume.pdf" 
-                                download="PRANESH_B_Resume.pdf"
+                                href="./PRANESH_B_AI_Resume.pdf" 
+                                download="PRANESH_B_AI_Resume.pdf"
                                 className="btn btn-outline" 
                                 style={{ marginLeft: '16px' }}
                             >

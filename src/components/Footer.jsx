@@ -13,7 +13,7 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} <span className="highlight">PRANESH B</span>. Engineered for Excellence.
                 </p>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', marginTop: '8px' }}>
-                    Full Stack Developer & Enterprise Systems Engineer
+                    AI & Full-Stack Developer | Software Engineer
                 </p>
             </div>
         </footer>

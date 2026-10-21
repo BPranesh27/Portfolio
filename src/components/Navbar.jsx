@@ -10,7 +10,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
             
-            const sections = ['about', 'skills', 'projects', 'experience', 'certifications', 'workshops', 'contact'];
+            const sections = ['about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -31,7 +31,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         { name: 'Skills', href: '#skills' },
         { name: 'Projects', href: '#projects' },
         { name: 'Experience', href: '#experience' },
-        { name: 'Workshops', href: '#workshops' },
+        { name: 'Certifications', href: '#certifications' },
         { name: 'Contact', href: '#contact' },
     ];
 
